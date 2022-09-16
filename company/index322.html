@@ -10,11 +10,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/animate.min.css">
     <style>
-        @font-face {
-          font-family: jejugothic;
-          src: url("img/JejuGothic.ttf");
-        }
-        *{margin: 0;padding: 0;}
         nav{
           opacity: 0.7;
         }
@@ -22,40 +17,32 @@
           color:white !important;
         }
         .navbar-default {
-            background-color: #0f2e70;
+          background-color: #0f2e70;
             border-color: #e7e7e7;
-        }
-        .navbar-brand{
-          position: absolute;
-          top: -10px !important;
+      
         }
         .carousel-inner img{
             width: 100%;
             height: 700px !important;
         }
-        .carousel-caption{
-          top:40%;
-          font-size: 30px;
-          font-family: jejugothic;
-        }
-        .carousel-caption h3{
-          font-size: 50px;
-        }
-        .item .carousel-caption h3{
-          color:#d8cdd8 !important;
+       .carousel-caption{
+        bottom: 300px;
+        font-size: 30px;
+       }
+
+       .carousel-caption h3{
+        font-size: 30px;
+       }
+       .item:nth-child(1)  .carousel-caption h3{
+        color: black !important;
+       }
+        .red{color:red;}
+        footer>div div{
+          padding-top: 10px;
+          padding-bottom: 10px;
         }
         .container h1, .container-fluid h1{
           padding-top: 100px;
-          font-family: jejugothic;
-        }
-        @media screen and (max-width:768px) {
-          .carousel-caption{
-            top:35%;
-            font-size: 20px;
-          }
-          .carousel-caption h3{
-            font-size: 30px;
-          }   
         }
     </style>
     <script>
@@ -87,31 +74,60 @@
       </script>
 </head>
 <body id="myPage">
+    <!-- Navigation ---------------------------------------------------------------------->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#myPage"><img src="/img/logo.png" alt="로고" width="200"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#subject" data-toggle="collapse" data-target=".navbar-collapse.in">과정소개</a></li>
+            <li><a href="#community" data-toggle="collapse" data-target=".navbar-collapse.in">커뮤니티</a></li>
+            <li><a href="#maps" data-toggle="collapse" data-target=".navbar-collapse.in">오시는길</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navigation -->
 
+    <!-- Carousel ------------------------------------------------------------------------->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
       
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
           <div class="item active">
-            <img src="img/pic01.jpg" alt="배경1">
+            <img src="img/pic01.jpg" alt="New York">
             <div class="carousel-caption">
-              <h3 class="animate__animated animate__slideInDown">안녕하세요!</h3>
-              <p>개발자로 취직하고 싶은 김태성 입니다.</p>
+              <h3>직업능력개발 우수훈련기관 선정</h3>
+              <p>직업훈련의 품질을 높이고 일자리 창출에 앞장서는 교육기관이 되겠습니다</p>
             </div>
           </div>
       
           <div class="item">
-            <img src="img/pic02.jpg" alt="배경2">
+            <img src="img/pic02.jpg" alt="Chicago">
             <div class="carousel-caption">
-              <h3 class="animate__animated animate__slideInDown">이수자평가 A등급 획득</h3>
-              <p>직업능력개발훈련 이수자평가에서 최우수 A등급을 획득하였습니다.</p>
+              <h3>Chicago</h3>
+              <p>Thank you, Chicago - A night we won't forget.</p>
             </div>
           </div>
       
           <div class="item">
-            <img src="img/pic03.jpg" alt="배경3">
+            <img src="img/pic03.jpg" alt="Los Angeles">
             <div class="carousel-caption">
-              <h3 class="animate__animated animate__slideInDown">4차산업혁명을 선도하는 IT 신기술교육의 메카</h3>
-              <p>최신IT기술 트렌드를 접목한 실무중심의 교육으로 대한민국 4차 산업혁명 시대의 미래를 열어가겠습니다.</p>
+              <h3>LA</h3>
+              <p>Even though the traffic was a mess, we had the best time.</p>
             </div>
           </div>
         </div>
@@ -136,33 +152,29 @@
               <div class="thumbnail">
                 <img src="img/pic04.jpg" alt="Paris">
                 <p><strong>웹&앱 콘텐츠 융합 자바(JAVA) 응용SW 및 웹개발자 양성 과정</strong></p>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/F-AHMOkNI3k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <p>교육기간 : 2022.09.19 ~ 2023.02.15 <br><span class="red">(5개월/900시간)</span></p>
               </div>
             </div>
             <div class="col-sm-3">
               <div class="thumbnail">
                 <img src="img/pic05.jpg" alt="New York">
-                <p><strong>New York</strong></p>
-                <p>Sat. 28 November 2015</p>
-                <button class="btn">Buy Tickets</button>
+                <p><strong>UI/UX 기반의 웹퍼블리셔&프론트엔드 웹개발자 양성 과정</strong></p>
+                <p>교육기간 :22.09.26 ~ 22.12.28<br><span class="red">(3개월/520시간)</span></p>
+
               </div>
             </div>
             <div class="col-sm-3">
               <div class="thumbnail">
                 <img src="img/pic06.jpg" alt="San Francisco">
-                <p><strong>San Francisco</strong></p>
-                <p>Sun. 29 November 2015</p>
-                <button class="btn">Buy Tickets</button>
+                <p><strong>UI/UX 기반의 프론트엔드 웹개발자 양성 과정</strong></p>
+                <p>교육기간 :22.11.24 ~ 22.12.28<br><span class="red">(5주/200시간)</span></p>
               </div>
             </div>
             <div class="col-sm-3">
               <div class="thumbnail">
                 <img src="img/pic07.jpg" alt="San Francisco">
-                
-                <p><strong>San Francisco</strong></p>
-                <p>Sun. 29 November 2015</p>
-                <button class="btn">Buy Tickets</button>
+                <p><strong>스마트 콘텐츠 융합 자바(JAVA) 응용SW및 웹개발자 양성 과정</strong></p>
+                <p>교육기간 :22.11.29 ~ 23.04.27<br><span class="red">(5개월/900시간)</span></p>
               </div>
             </div>
         </div>
@@ -208,11 +220,11 @@
     <!-- 커뮤니티 -->
 
     <!-- 오시는 길 -------------------------------------------------->
-    <div id="maps" class="container-fluid" style="margin: 0 !important;padding:0 !important;">
+    <div id="maps" class="container-fluid">
       <h1 class="text-center">오시는 길</h1>
-      <div id="map" style="width:100%;height:500px;"></div>
+      <div id="map" style="width:100%;height:350px;"></div>
 
-      <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2f0bb35932325e9049074ab790afaa8f"></script>
+      <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=975275847d8fd3ce53f2c00bbacc96f4"></script>
       <script>
       var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
           mapOption = { 
